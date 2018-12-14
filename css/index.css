@@ -1,0 +1,230 @@
+
+		body{
+			margin: 0;
+			padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+			background: #e9e9e9f3;
+			padding-bottom: 174px;
+		}
+		header{
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0 50px;
+		background: #277dea;
+		width: 100%;
+		box-sizing: border-box;
+		position: fixed;
+		z-index: 9;
+		}
+		
+		header .logo{
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 24px;
+			float: left;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		header nav{
+			float: right;
+		}
+
+		header nav ul{
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		header nav ul li{
+			list-style: none;
+		}
+		header nav ul li a{
+			height: 50px;
+			line-height: 50px;
+			padding: 0 20px;
+			color: #fff;
+			text-decoration: none;
+			display: block;
+		}
+		header nav ul li a:hover{
+			color: #fff;
+			background:  #277ceaa8;
+            border-bottom: 4px solid  #00ffff;
+		}
+		header nav ul li a.active {
+			color: #00ffff;
+			border-bottom: 4px solid #00ffff;
+		}
+		.toggle{
+			display: none;
+		}
+		@media (max-width: 900px)
+		{
+			.toggle
+			{
+				width: 100%;
+				margin: 0;
+				padding: 10px;
+				line-height: 20px;
+				text-align: right;
+				box-sizing: border-box;
+				color: #fff;
+				font-size:30px;
+				cursor: pointer;	
+				display: block;
+				top: 90px;
+			}
+			header{
+				padding: 0 -0px;
+				margin: 0;
+			}
+			.active
+			{
+				display: block;
+			}
+			header nav{
+				display: none;
+				position: absolute;
+				width: 100%;
+				height: calc (100vh -5px);
+				background: #262626f3;
+				top: 50px;
+				left: 0;
+				transition: 0.5s;
+			}
+			header nav ul {
+				display: block;
+				text-align: center;
+			}
+			header nav ul li a{
+				border-bottom: 4px solid #262626;
+			}
+
+		section {
+			background: #fff;
+			background-color: #1c1e20;
+            box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.062);
+		}
+			
+		}
+		@media (max-width: 1280px)
+		{
+			header{
+				padding: 0 50px;
+			}
+		}
+		@media (min-width: 1440px)
+		{
+			header{
+				padding: 0 300px;
+			}
+
+		}
+
+
+
+
+		
+		/* FOOTER*/
+		.footer {
+			border-top: 4px solid #277dea;
+			background-color: #1c1e20;
+			height: 400px;
+			margin-top: 34px;
+			position: relative;
+			z-index: 1;
+			margin-bottom: -300px;
+		}
+		.footer p {
+			text-align: center;
+			color: #555;
+			font-family: arial;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: 4;
+		}
+
+            .flex-container {
+              padding: 0;
+			  margin: 0;
+			  margin-top: 200px;
+			  margin-bottom: 200px ;
+              list-style: none;
+              
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              
+              -webkit-flex-flow: row wrap;
+              justify-content: space-around;
+			}
+			.flex-itembox {
+            border-radius: 8px;
+			}	
+
+		/*   Search BOX */
+		h1{
+            margin: 0 0 10px;
+            padding: 0;
+            color: rgb(117, 117, 117);
+            font-size: 24px;
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        input{
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            box-sizing: bsorder-box;
+            transition: .5s
+        }
+        input[type="text"]
+        {
+            width: auto;
+            height: 50px;
+            border: none;
+            outline:none;
+			padding: 0 25px;
+			box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.24);
+			border-radius: 25px 0px 0px 25px;
+		}
+		input[type="submit"]
+        {
+            left: -5px;
+            position: relative;
+            border: none;
+            outline: none;
+            cursor: pointer;
+			background: #277dea;
+			border-radius: 0px 25px 25px 0px;
+			box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.24);
+            color: #fff;
+            width: 100px;
+			height: 51px;
+		}
+	   input[type="submit"]:hover
+        {
+			background: #00ffff;
+			color: #fff;
+		}
+		::-webkit-input-placeholder {
+		   font-style: italic;
+		   color:#00ffff;
+		}
+		::-moz-placeholder {
+		   font-style: italic; 
+		   color:#00ffff; 
+		}
+		:-ms-input-placeholder {  
+			font-style: italic; 
+			color:#00ffff;
+		}

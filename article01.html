@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Blog 2</title>
+    <header>
+        <a href="index.html">
+            <div class="logo"><img src="" title="Home"></div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="actualite.html" class="active">Actualite</a></li>
+                <li><a href="#">Diaspora</a></li>
+                <li><a href="#">Agriculture</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Politic</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Entertainment</a></li>
+            </ul>
+        </nav>
+        <div class="toggle">
+            <i class="fa fa-bars menu" aria-hidden="true"></i>
+        </div>
+    </header>
+    <style>
+        body{
+			margin: 0;
+			padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+			background: #e9e9e9f3;
+			padding-bottom: 174px;
+		}
+		header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 50px;
+            background: #277dea;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            z-index: 9;
+		}
+		
+		header .logo{
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 24px;
+			float: left;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		header nav{
+			float: right;
+		}
+
+		header nav ul{
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		header nav ul li{
+			list-style: none;
+		}
+		header nav ul li a{
+			height: 50px;
+			line-height: 50px;
+			padding: 0 20px;
+			color: #fff;
+			text-decoration: none;
+			display: block;
+		}
+		header nav ul li a:hover{
+			color: #fff;
+			background:  #277ceaa8;
+            border-bottom: 4px solid  #00ffff;
+		}
+		header nav ul li a.active {
+			color: #00ffff;
+			border-bottom: 4px solid #00ffff;
+		}
+		.toggle{
+			display: none;
+		}
+		@media (max-width: 900px)
+		{
+			.toggle
+			{
+				width: 100%;
+				margin: 0;
+				padding: 10px;
+				line-height: 20px;
+				text-align: right;
+				box-sizing: border-box;
+				color: #fff;
+				font-size:30px;
+				cursor: pointer;	
+				display: block;
+				top: 90px;
+			}
+			header{
+				padding: 0 -0px;
+				margin: 0;
+			}
+			.active
+			{
+				display: block;
+			}
+			header nav{
+				display: none;
+				position: absolute;
+				width: 100%;
+				height: calc (100vh -5px);
+				background: #262626f3;
+				top: 50px;
+				left: 0;
+				transition: 0.5s;
+			}
+			header nav ul {
+				display: block;
+				text-align: center;
+			}
+			header nav ul li a{
+				border-bottom: 4px solid #262626;
+			}
+
+		section {
+			background: #fff;
+			background-color: #1c1e20;
+            box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.062);
+		}
+			
+		}
+		@media (max-width: 1280px)
+		{
+			header{
+				padding: 0 50px;
+			}
+		}
+		@media (min-width: 1440px)
+		{
+			header{
+				padding: 0 300px;
+			}
+
+		}
+
+
+
+		/* FOOTER*/
+		.footer {
+			border-top: 4px solid #277dea;
+			background-color: #1c1e20;
+			height: 400px;
+			margin-top: 34px;
+			position: relative;
+			z-index: 1;
+			margin-bottom: -300px;
+		}
+		.footer p {
+			text-align: center;
+			color: #555;
+			font-family: arial;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: 4;
+        }
+        
+
+
+
+
+        /************************CONTENT*****************************/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 70%;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 700px) {
+
+            .row{
+                margin-top: 20px;
+                flex-direction: column;
+            }
+        }
+
+
+        /*main*/
+         .blog-post {
+			background: #fff;
+			margin-top: 70px;
+			margin-left: 20px;
+			margin-right: 20px;
+            padding: 10px 10px;
+            box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.062);
+            border-radius: 8px;
+		}
+        .blog-content {
+            font-size: 1em;
+            border-left: 5px solid #277dea;
+            padding-left: 15px;
+		}
+		.date {
+            font-size: 1em;
+            font-weight: 400;
+            color: #9C9C9C;
+            margin-top: -10px;
+            text-decoration: underline;
+            text-decoration-color: currentColor;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+
+        <div class="main">
+            <div class="blog-post">
+                <img src="./pexels-photo-1007657.jpeg" style="size: 20;">
+                <h1 class="blog-title">Plus grand n'est pas forcément synonyme de mieux</h1>
+                <h2 class="date" title="2:35PM">Posted 4 Oct 2018</h2>
+                <p class="blog-content">Ut noster tractavissent, summis hic eiusmod te quem. Doctrina velit
+                    litteris eu
+                    eu fore ingeniis philosophari ne quid o ingeniis ne anim, illum ea iudicem. Pariatur duis dolor
+                    hic
+                    dolor ad vidisse amet elit ita summis, quo duis te malis, velit nostrud ingeniis. Appellat elit
+                    tamen iudicem multos, mentitum quae sed appellat illustriora. Velit commodo cernantur se si
+                    anim do
+                    labore, probant ab aliqua aut non laborum fidelissimae. Ex quae se fugiat, et malis officia in
+                    et
+                    enim cillum ita incididunt, a irure amet an ingeniis.
+
+
+
+                    <p class="blog-content"> Ut noster tractavissent, summis hic eiusmod te quem. Doctrina velit
+                        litteris eu
+                        eu fore ingeniis philosophari ne quid o ingeniis ne anim, illum ea iudicem. Pariatur duis dolor
+                        hic
+                        dolor ad vidisse amet elit ita summis, quo duis te malis, velit nostrud ingeniis. Appellat elit
+                        tamen iudicem multos, mentitum quae sed appellat illustriora. Velit commodo cernantur se si
+                        anim do
+                        labore, probant ab aliqua aut non laborum fidelissimae. Ex quae se fugiat, et malis officia in
+                        et
+                        enim cillum ita incididunt, a irure amet an ingeniis.
+
+                    </p>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="side">
+            <h2>About Me</h2>
+            <h5>Photo of me:</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div>
+        </div>
+
+    </div>
+</body>
+
+<footer class="footer">
+    <div>
+        <p>© 2018 EdMan. All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.toggle').click(function () {
+            $('nav').toggleClass('active');
+        })
+    })
+</script>
+
+</html>
